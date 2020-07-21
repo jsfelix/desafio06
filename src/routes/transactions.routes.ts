@@ -37,6 +37,8 @@ transactionsRouter.delete('/:id', async (request, response) => {
 
 transactionsRouter.post('/import', async (request, response) => {
   // TODO
+  // assistir ao video de explicação do desafio para importar CSV
+  // a partir de 01:09:00
   return response.json({ ok: true });
 });
 
