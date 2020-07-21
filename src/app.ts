@@ -11,6 +11,7 @@ import createConnection from './database';
 
 createConnection();
 const app = express();
+const log = console;
 
 app.use(express.json());
 app.use(routes);
@@ -23,7 +24,7 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
     });
   }
 
-  console.error(err);
+  log.error(err);
 
   return response.status(500).json({
     status: 'error',
