@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import 'dotenv/config';
-import 'cors';
+import cors from 'cors';
 
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
@@ -14,6 +14,7 @@ createConnection();
 const app = express();
 const log = console;
 
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
